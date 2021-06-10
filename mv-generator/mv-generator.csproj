@@ -1,0 +1,801 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>mv_generator</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ffmpeg-linux64\ffmpeg" />
+    <None Remove="ffmpeg-linux64\ffprobe" />
+    <None Remove="ffmpeg-linux64\GPLv3.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-all.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-bitstream-filters.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-codecs.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-devices.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-filters.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-formats.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-protocols.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-resampler.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-scaler.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg-utils.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffmpeg.txt" />
+    <None Remove="ffmpeg-linux64\manpages\ffprobe.txt" />
+    <None Remove="ffmpeg-linux64\model\other_models\model_V8a.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_libsvmnusvr_currentbest.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_libsvmnusvr_currentbest.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv1.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv1.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv2.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv2.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv3.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv3.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv3a.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv3a.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv4.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxall_vmafv4.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_libsvmnusvr_currentbest.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_libsvmnusvr_currentbest.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_norm_type_none.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_norm_type_none.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv1.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv1.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv2.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv2.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3a.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3a.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflx_v1.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflx_v1.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflx_vmaff_rf_v1.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\nflx_vmaff_rf_v2.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\niqe_v0.1.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\vmaf_4k_v0.6.1rc.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\vmaf_4k_v0.6.1rc.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\other_models\vmaf_v0.6.0.pkl" />
+    <None Remove="ffmpeg-linux64\model\other_models\vmaf_v0.6.0.pkl.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0001" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0001.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0002" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0002.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0003" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0003.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0004" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0004.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0005" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0005.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0006" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0006.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0007" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0007.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0008" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0008.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0009" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0009.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0010" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0010.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0011" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0011.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0012" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0012.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0013" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0013.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0014" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0014.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0015" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0015.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0016" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0016.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0017" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0017.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0018" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0018.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0019" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0019.model" />
+    <None Remove="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.model" />
+    <None Remove="ffmpeg-linux64\qt-faststart" />
+    <None Remove="ffmpeg-linux64\readme.txt" />
+    <None Remove="ffmpeg\avcodec-58.dll" />
+    <None Remove="ffmpeg\avdevice-58.dll" />
+    <None Remove="ffmpeg\avfilter-7.dll" />
+    <None Remove="ffmpeg\avformat-58.dll" />
+    <None Remove="ffmpeg\avutil-56.dll" />
+    <None Remove="ffmpeg\ffmpeg.exe" />
+    <None Remove="ffmpeg\ffplay.exe" />
+    <None Remove="ffmpeg\ffprobe.exe" />
+    <None Remove="ffmpeg\postproc-55.dll" />
+    <None Remove="ffmpeg\swresample-3.dll" />
+    <None Remove="ffmpeg\swscale-5.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ffmpeg-linux64\ffmpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\ffprobe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\GPLv3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-all.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-bitstream-filters.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-codecs.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-devices.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-filters.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-formats.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-protocols.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-resampler.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-scaler.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg-utils.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffmpeg.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\manpages\ffprobe.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\model_V8a.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_libsvmnusvr_currentbest.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_libsvmnusvr_currentbest.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv1.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv1.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv2.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv2.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv3.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv3.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv3a.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv3a.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv4.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxall_vmafv4.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_libsvmnusvr_currentbest.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_libsvmnusvr_currentbest.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_norm_type_none.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_norm_type_none.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv1.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv1.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv2.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv2.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3a.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflxtrain_vmafv3a.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflx_v1.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflx_v1.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflx_vmaff_rf_v1.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\nflx_vmaff_rf_v2.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\niqe_v0.1.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\vmaf_4k_v0.6.1rc.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\vmaf_4k_v0.6.1rc.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\vmaf_v0.6.0.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\other_models\vmaf_v0.6.0.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0001.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0002.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0003.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0004.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0005.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0006.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0007">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0007.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0008">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0008.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0009">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0009.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0010">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0010.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0011">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0011.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0012">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0012.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0013">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0013.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0014">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0014.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0015">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0015.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0016">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0016.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0017">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0017.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0018">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0018.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0019">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.0019.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\model\vmaf_4k_rb_v0.6.2\vmaf_4k_rb_v0.6.2.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\qt-faststart">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg-linux64\readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\avcodec-58.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\avdevice-58.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\avfilter-7.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\avformat-58.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\avutil-56.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\ffmpeg.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\ffplay.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\ffprobe.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\postproc-55.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\swresample-3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg\swscale-5.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0001.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0002.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0003.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0004.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0005.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0006.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0007">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0007.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0008">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0008.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0009">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0009.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0010">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0010.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0011">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0011.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0012">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0012.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0013">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0013.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0014">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0014.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0015">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0015.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0016">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0016.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0017">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0017.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0018">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0018.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0019">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0019.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0020">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.0020.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_b_v0.6.3\vmaf_b_v0.6.3.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0001.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0002.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0003.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0004.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0005.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0006.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0007">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0007.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0008">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0008.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0009">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0009.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0010">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0010.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0011">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0011.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0012">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0012.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0013">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0013.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0014">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0014.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0015">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0015.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0016">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0016.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0017">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0017.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0018">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0018.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0019">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.0019.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.2\vmaf_rb_v0.6.2.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0001">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0001.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0002">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0002.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0003">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0003.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0004">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0004.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0005">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0005.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0006">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0006.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0007">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0007.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0008">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0008.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0009">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0009.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0010">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0010.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0011">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0011.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0012">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0012.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0013">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0013.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0014">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0014.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0015">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0015.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0016">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0016.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0017">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0017.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0018">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0018.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0019">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0019.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0020">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.0020.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ffmpeg-linux64\model\vmaf_rb_v0.6.3\vmaf_rb_v0.6.3.pkl.model">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
