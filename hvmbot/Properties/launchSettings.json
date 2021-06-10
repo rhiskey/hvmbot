@@ -1,0 +1,37 @@
+{
+  "profiles": {
+    "hvmbot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DB_USER": "",
+        "TG_BOT_TOKEN": "1102966319:AAGHxFV62Snda4N5VLFAXfcMBDxZMxClPnc",
+        "DB_NAME": "",
+        "DB_PORT": "3306",
+        "VK_LOGIN": "79015003711",
+        "DB_PASS": "",
+        "VK_PASS": ">ETtp;{`+3+!+_*J",
+        "VK_GROUP_ID": "31640582",
+        "DB_HOST": "",
+        "TG_ACCESS_TOKEN": "AAGHxFV62Snda4N5VLFAXfcMBDxZMxClPnc",
+        "TG_CHAT_ID": "-1001366460379",
+        "ROLLBAR_TOKEN": "d9c54d83e07a4da38654395fc3bb715e",
+        "VK_API_TOKEN": "960f39761e14a46d9375989ed1e0cfbcfa090f1277a2a6a6907a05564b863866c286f68e5111fd23ab840"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "environmentVariables": {
+        "VK_KATE_MOBILE_APP_ID": "2685278",
+        "TG_BOT_TOKEN": "\"1102966319:AAGHxFV62Snda4N5VLFAXfcMBDxZMxClPnc\"",
+        "VK_KATE_MOBILE_TOKEN": "33b3d835088fa5224f530b946a1262d46204c509c88de2b87ca36cfc75d17ee657475cbb9351e21df3844",
+        "VK_LOGIN": "79015003711",
+        "VK_PASS": "6*ZA2E||]3Cj^+68",
+        "VK_GROUP_ID": "31640582",
+        "TG_ACCESS_TOKEN": "AAGHxFV62Snda4N5VLFAXfcMBDxZMxClPnc",
+        "TG_CHAT_ID": "-1001366460379",
+        "VK_API_TOKEN": "abfd4a60eebd086283acf59e8e61137ea78f73eca7877b0caa751b5fb3c3aff56ade7f7306fecfd56da20"
+      },
+      "DockerfileRunArguments": ""
+    }
+  }
+}
