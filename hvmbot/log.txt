@@ -1,0 +1,10 @@
+=============Error Logging ===========
+===========Start============= 04/23/2021 10:21:28
+Error Message: The remote server returned an error: (404) Not Found.
+Stack Trace:    at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream)
+   at System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   at hvmbot.VKPart.AudioDownloader.DownloadMP3FromUrl(String url, String fileName) in J:\GitHub\hvmbot\hvmbot\VKPart\AudioDownloader.cs:line 42
+   at hvmbot.Classes.TelegramSender.SendMusic2TG(Object mp3Class) in J:\GitHub\hvmbot\hvmbot\Classes\TelegramSender.cs:line 40
+===========End============= 04/23/2021 10:21:28
