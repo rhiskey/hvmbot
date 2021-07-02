@@ -32,7 +32,7 @@ namespace hvmbot.VKPart
         private static readonly string vkLogin = Configuration.VKAuth.GetVKLogin();
         private static readonly string vkPassword = Configuration.VKAuth.GetVKPassword();
         private readonly static ulong kateMobileAppID = Configuration.VKAuth.GetVKKateMobileAppID(); //Скачивание музыки и фото
-        //private readonly static string kateMobileToken = Configuration.VKAuth.GetVKKateMobileToken();
+        private readonly static string kateMobileToken = Configuration.VKAuth.GetVKKateMobileToken();
 
         static List<string> otpList = new List<string>();
         //Add your objects for each string 
@@ -220,31 +220,9 @@ namespace hvmbot.VKPart
                                 //photoList = null;
                                 if (photoList2Load.Count > 0)
                                 {
-                                    //services = new ServiceCollection();
-                                    //services.AddAudioBypass();
                                     try
                                     {
-                                        //// Контейнер для инверсии зависимостей
-                                        //var services = new ServiceCollection();
-
-                                        //// Регистрация логгера
-                                        //services.AddSingleton<ILoggerFactory, LoggerFactory>();
-                                        //services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
-                                        //services.AddLogging(builder =>
-                                        //{
-                                        //    builder.ClearProviders();
-                                        //    builder.SetMinimumLevel(LogLevel.Trace);
-                                        //    builder.AddNLog(new NLogProviderOptions
-                                        //    {
-                                        //        CaptureMessageProperties = true,
-                                        //        CaptureMessageTemplates = true
-                                        //    });
-                                        //});
-                                        //NLog.LogManager.LoadConfiguration("nlog.config");
-
                                         api = new VkApi();
-
-                                        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
                                         //Get JPG Link
                                         //var post = api.Wall.Get(new WallGetParams { Count = 1, OwnerId = (long?)groupID });
                                         api.Authorize(new ApiAuthParams() //Solve Captcha

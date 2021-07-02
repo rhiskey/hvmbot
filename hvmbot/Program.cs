@@ -20,6 +20,7 @@ namespace hvmbot
             var VK_LOGIN = System.Environment.GetEnvironmentVariable("VK_LOGIN");
             var VK_PASS = System.Environment.GetEnvironmentVariable("VK_PASS");
             ulong VK_KATE_MOBILE_APP_ID = (ulong)Convert.ToInt64(DotNetEnv.Env.GetInt("VK_KATE_MOBILE_APP_ID"));
+            //var KATE_MOBILE_TOKEN = System.Environment.GetEnvironmentVariable("VK_KATE_MOBILE_TOKEN");
 
             string rollbarToken = System.Environment.GetEnvironmentVariable("ROLLBAR_TOKEN");
 
@@ -29,9 +30,11 @@ namespace hvmbot
             Configuration.VKAuth.SetVKLogin(VK_LOGIN);
             Configuration.VKAuth.SetVKPassword(VK_PASS);
             Configuration.VKAuth.SetVKKateMobileAppID(VK_KATE_MOBILE_APP_ID); //Скачивание музыки и фото
+            //Configuration.VKAuth.SetVKKateMobileToken(KATE_MOBILE_TOKEN);
             Configuration.TGAuth.SetTGAccessToken(TG_ACCESS_TOKEN);
             Configuration.TGAuth.SetTGChatID(TG_CHAT_ID);
             Configuration.TGAuth.SetTGBotToken(TG_BOT_TOKEN);
+            
             Configuration.rollbarToken = rollbarToken;
 
 

@@ -162,7 +162,7 @@ namespace hvmbot.TelegramPart
                         else
                         {
 #endif
-                        msg = await botClient.SendAudioAsync(tg_chat_id, iof, message, ParseMode.Default, duration: 0, performer: author, title /*, false, 0, inlineKeyboard*/ /*,false, 0, null, new CancellationTokenSource(waitUntillUpload).Token*/); //Передавать JPEG <200 кб превью (фотку поста)
+                        msg = await botClient.SendAudioAsync(tg_chat_id, iof, message, ParseMode.Default, null, duration: 0, performer: author, title /*, false, 0, inlineKeyboard*/ /*,false, 0, null, new CancellationTokenSource(waitUntillUpload).Token*/); //Передавать JPEG <200 кб превью (фотку поста)
                                                                                                                                                                                                                                                           //                      }
                     }
                     else msg = await botClient.SendAudioAsync(tg_chat_id, iof);
