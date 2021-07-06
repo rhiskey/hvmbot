@@ -208,11 +208,14 @@ namespace hvmbot.VKPart
                                             // add all audios to list
                                             trackIds.Add(attachFullId);
                                         }
+#if DEBUG
                                         if (attach.Type == typeof(VkNet.Model.Attachments.Photo))
                                         {
                                             photoList2Load.Add(attachFullId);
                                         }
-
+#else
+                                        //goto SendMusic;
+#endif
                                     }
 
                                 //Отсылаем картинки
@@ -395,8 +398,10 @@ namespace hvmbot.VKPart
                                 {
                                     if (trackIds.Count > 0)
                                         trackIds.Clear();
+#if DEBUG
                                     if (photoList.Count > 0)
                                         photoList.Clear();
+#endif
                                     if (photoList2Load.Count > 0)
                                         photoList2Load.Clear();
 
