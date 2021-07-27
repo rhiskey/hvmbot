@@ -410,7 +410,7 @@ namespace hvmbot.VKPart
                                 catch (Exception ex) { Logging.ErrorLogging(ex); Logging.ReadError(); }
                             }
 
-                        /*                        if (a.Type == GroupUpdateType.MessageNew)
+/*                        if (a.Type == GroupUpdateType.MessageNew)
                                                 {
                                                     string userMessage = a.Message.Text.ToLower();
                                                     long? userID = a.Message.FromId;
@@ -435,7 +435,7 @@ namespace hvmbot.VKPart
                                                         switch (userMessage)
                                                         {
                                                             case "подписка": 
-                                                                //Отправляем
+                                                                                        //Отправляем
 
 
                                                                 if (isLinked == true)
